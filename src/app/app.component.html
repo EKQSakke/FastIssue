@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <span>FastIssue</span>
+</mat-toolbar>
+
+<div class="wrapper">
+    <div class="main">
+        <div>
+            <label>Repository:</label>
+            <mat-select placeholder="Select a repository">
+                <mat-option *ngFor="let repo of repositories">
+                    {{ repo }}
+                </mat-option>
+            </mat-select>
+        </div>
+        <textarea #issue></textarea>
+        <br>
+        <button (click)="trySendIssue()">Submit</button>
+        <span>NOTE: Line break for multiple issues</span>
+    </div>
+</div>

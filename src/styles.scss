@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@use '~@angular/material' as mat;
+
+$primary: mat.define-palette(mat.$purple-palette, 500);
+$accent: mat.define-palette(mat.$green-palette, A200, A100, A400);
+
+$primary-color: map-get($primary, 500);
+$primary-color-dark: map-get($primary, 900);
+
+$accent-color: map-get($accent, 500);
+$accent-color-dark: map-get($accent, 900);
+
+$bg-color: rgb(49, 49, 49);
+
+html, body {
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $bg-color;
+}
+
+mat-select {
+    margin: 20px;
+    width: 150px;
+
+    background-color: $bg-color;
+}
+
+mat-label {
+    color: white;
+}
+
+mat-toolbar {
+    background-color: $primary-color;
+    color: white;
+}
+
+button {
+    background-color: $bg-color;
+    color: white;
+}
+
+span{
+    color: white;
+}
+
+::placeholder {
+    color: black;
+}
